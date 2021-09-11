@@ -1,10 +1,13 @@
-header {
+header { /* Header bar design */
   height: 400px;
   width: 100%;
   background-color: #718cd1;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Use flex to design for the picture and name displayed */
+  flex-direction: column; /* Arrange the picture and name in a column */
+  justify-content: center; /* Displayed both items in the middle of the page */
+  align-items: center; /* Center-alignment for both items displayed */
+}
+h2 {
+  font-weight: normal;
 }

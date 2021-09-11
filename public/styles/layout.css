@@ -31,7 +31,8 @@ body {
  }
 
  main {
+  /* set values of main as a child of "body" */
   width: 90%;
   background-color: inherit;
-  align-self: center; 
+  align-self: center;
  }
