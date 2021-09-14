@@ -28,3 +28,10 @@
 .new-tweet h2 {
   display:none;
 }
+.counter-red {
+  color: red;
+}
+
+.counter-black {
+  color: black;
+}
