@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
 
     <!-- Font Awsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -34,8 +34,8 @@
     <!-- App JS for character counter -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Font Awesome Icon-->
-    <script src="https://kit.fontawesome.com/014d6521ea.js" crossorigin="anonymous"></script>
+    <!-- Timeago library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -64,6 +64,8 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- Section for writing new tweet -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method = "POST" action = "/tweets">
@@ -75,6 +77,11 @@
           </div>
         </form>
       </section>
+
+      <!-- Section for displaying existing tweets -->
+      <article id="tweets-container">
+      </article>
+      <!-- Complete displaying existing tweets -->
     </main>
   </body>
 </html>

@@ -1,6 +1,10 @@
 nav { /* Navigation bar design */
   height: 120px;
   width: 100%; /* 100% of body width */
+  top:0;
+  /* Fixed navigation bar */
+  position: fixed;
+  /**************/
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;

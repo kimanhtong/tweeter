@@ -1,12 +1,15 @@
 header { /* Header bar design */
   height: 400px;
   width: 100%;
+  /* Leave room for navigation bar*/
+  margin-top: 120px;
+  /************/
   background-color: #718cd1;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
   display: flex; /* Use flex to design for the picture and name displayed */
   flex-direction: column; /* Arrange the picture and name in a column */
-  justify-content: center; /* Displayed both items in the middle of the page */
   align-items: center; /* Center-alignment for both items displayed */
+  justify-content:space-evenly;
 }
 h2 {
   font-weight: normal;
