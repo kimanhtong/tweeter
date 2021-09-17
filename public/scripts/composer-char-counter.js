@@ -34,8 +34,10 @@ $(document).ready(function() {
         $.post('/', serializedData)
         .then((resp) => {
           console.log(resp);
+
           loadtweets();
         })
+        $('#tweet-text').val('');
       }
     }
   });
@@ -59,7 +61,7 @@ $(document).ready(function() {
     loadtweets();
 
     const addtweet = (tweet) => {
-      const $tweethtml =  `
+      const tweethtml =  `
         <article class="tweet">
           <h4>
             <p>
@@ -79,7 +81,7 @@ $(document).ready(function() {
           </footer>
         </article>`;
 
-      $('tweet').append($tweethtml);
+      $('tweet').append(tweethtml);
       const $tweets = $('<article>').addClass('tweet');
       return $tweets;
     }
