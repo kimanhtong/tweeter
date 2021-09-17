@@ -1,6 +1,4 @@
 $(document).ready(function(){
-  renderTweets(data);
-
   $("#tweet-text").on("input", function (){
     const count = 140 - this.value.length;
     $(".counter").each (function () {
@@ -24,7 +22,22 @@ $(document).ready(function(){
     .then((resp) => {
       console.log(resp);
     })
-
   });
   
+  $(() => {
+    const loadtweets = () => {$.ajax({
+      url: '/tweets',
+      method: "GET",
+      dataType: "json",
+      success: (posts) => {
+        console.log(posts);
+        renderTweets(posts);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })}
+    loadtweets();
+  })
+    
 });
