@@ -38,6 +38,7 @@ $(document).ready(function() {
           loadtweets();
         })
         $('#tweet-text').val('');
+        $('.counter').val(140);
       }
     }
   });
