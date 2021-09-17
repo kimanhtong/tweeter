@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  // Load tweets from DB
+  loadtweets();
 
   // Display the number of characters typed in
   $("#tweet-text").on("input", function (){
@@ -31,10 +33,9 @@ $(document).ready(function() {
       // Send user inputs to server when validation is passed
       else {
         const serializedData = $(this).serialize();
-        $.post('/', serializedData)
+        $.post('/tweets', serializedData)
         .then((resp) => {
           console.log(resp);
-
           loadtweets();
         })
         $('#tweet-text').val('');
@@ -42,50 +43,4 @@ $(document).ready(function() {
       }
     }
   });
-  
-  $(() => {
-    const loadtweets = () => {$.ajax({
-      url: '/tweets',
-      method: "GET",
-      dataType: "json",
-      success: (tweets) => {
-        const $tweet = addtweet(tweets[0]);
-        $container = $('#tweets-container');
-        $container.prepend($tweet);
-        renderTweets(tweets);
-      },
-      error: (error) => {
-        console.log(error);
-      }
-    })}
-
-    loadtweets();
-
-    const addtweet = (tweet) => {
-      const tweethtml =  `
-        <article class="tweet">
-          <h4>
-            <p>
-              <img src="${tweet.user.avatars}"> 
-              <label> ${tweet.user.name} </label>
-            </p>
-            <p> ${tweet.user.handle} </p>
-          </h4>
-          <section class = tweeter-content>${tweet.content.text}</section>
-          <footer>
-            <time class="timeago"> ${timeago.format(new Date(tweet.created_at))}</time>
-            <p>
-              <i class="fa fa-flag"></i>
-              <i class="fa fa-heart"></i>
-              <i class="fa fa-retweet"></i>
-            </p>
-          </footer>
-        </article>`;
-
-      $('tweet').append(tweethtml);
-      const $tweets = $('<article>').addClass('tweet');
-      return $tweets;
-    }
-  })
-
-});
+})
