@@ -3,9 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-// Fake data taken from initial-tweets.json
-
 const renderTweets = function(tweets) {
 // loops through tweets
 // calls createTweetElement for each tweet

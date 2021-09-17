@@ -46,6 +46,10 @@ main {
   flex-direction: column;
   margin-bottom: 10px;
 }
+#error {
+  display: none;
+  color: red;
+}
 .tweet {
   width: 100%;
   height:unset;
