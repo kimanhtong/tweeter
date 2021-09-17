@@ -17,19 +17,14 @@ $(document).ready(function(){
 
   $("form").submit(function(event) {
     console.log($("counter").textContent);
-    if ($("counter") === 140) {
-      const msg = "Your tweet cannot be empty.";
-      console.log(msg);
-      /*how to display the msg???*/
-      return false
-    }
-    if ($("counter") < 0) {
-      const msg = "Your tweet is too long.";
-      /*how to display the msg???*/
-      console.log(msg);
-      return false
-    }
     event.preventDefault();
+    const serializedData = $(this).serialize();
+    console.log(serializedData);
+    $.post('/', serializedData)
+    .then((resp) => {
+      console.log(resp);
+    })
+
   });
   
 });
