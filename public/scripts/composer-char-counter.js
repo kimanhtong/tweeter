@@ -1,7 +1,6 @@
 $(document).ready(function() {
   // Load tweets from DB
   loadtweets();
-
   // Display the number of characters typed in
   $("#tweet-text").on("input", function (){
     const count = 140 - this.value.length;

@@ -49,6 +49,7 @@ main {
 #error {
   display: none;
   color: red;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .tweet {
   width: 100%;
