@@ -1,10 +1,8 @@
-$(document).ready(function() {
-  // Load tweets from DB
-  loadtweets();
+$(document).ready(function () {
   // Display the number of characters typed in
-  $("#tweet-text").on("input", function (){
+  $("#tweet-text").on("input", function () {
     const count = 140 - this.value.length;
-    $(".counter").each (function () {
+    $(".counter").each(function () {
       $(this).val(count);
       if (count < 0) {
         $(this).addClass("counter-red");
@@ -17,29 +15,4 @@ $(document).ready(function() {
     // Hide validation while typing data in the field
     $("#error").slideUp();
   });
-
-  // Process on data submission if user clicks TWEET button
-  $("form").submit(function(event) {
-    event.preventDefault();
-    // Validate the length of tweet content must be > 0 and <= 140 
-    const tweetLength = $('#tweet-text').val().length;
-    if (tweetLength === 0) {
-     $('#error').text('Sorry, your tweet cannot be blank!').slideDown();
-    } else {
-      if (tweetLength > 140) {
-        $('#error').text('Sorry, your tweet is too long!').slideDown();
-      }
-      // Send user inputs to server when validation is passed
-      else {
-        const serializedData = $(this).serialize();
-        $.post('/tweets', serializedData)
-        .then((resp) => {
-          console.log(resp);
-          loadtweets();
-        })
-        $('#tweet-text').val('');
-        $('.counter').val(140);
-      }
-    }
-  });
-})
+});

@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -25,7 +27,7 @@ body {
  */
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -49,20 +51,21 @@ main {
 #error {
   display: none;
   color: red;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .tweet {
   width: 100%;
-  height:unset;
+  /*height:unset;*/
   border-style: solid;
   border-width: 5px;
   margin-top: 10px; /* Set the distance between 2 tweets */
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  /* justify-content:center;*/
 }
-.tweet h4, footer {
+.tweet h4,
+footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -77,10 +80,13 @@ main {
   color: rgb(47, 47, 124);
 }
 footer .fa:hover {
-  color:rgb(196, 148, 46)
+  color: rgb(196, 148, 46);
 }
 .tweet h4 p {
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
+}
+.tweet p {
+  word-break: break-all;
 }
