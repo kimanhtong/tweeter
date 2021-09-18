@@ -8,6 +8,7 @@ const renderTweets = function(tweets) {
 // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
   if (tweets.length > 0) {
+    $('#tweets-container').empty();
     tweets.forEach(item => {
       const $tweet = createTweetElement(item);
       $('#tweets-container').prepend($tweet);
@@ -52,26 +53,3 @@ const loadtweets = () => {$.ajax({
     console.log(error);
   }
 })}
-
-const addtweet = (tweet) => {
-  const $content = `
-    <h4>
-      <p>
-        <img src="${tweet.user.avatars}"> 
-        <label> ${tweet.user.name} </label>
-      </p>
-      <p> ${tweet.user.handle} </p>
-    </h4>
-    <section class = tweeter-content>${tweet.content.text}</section>
-    <footer>
-      <time class="timeago"> ${timeago.format(new Date(tweet.created_at))}</time>
-      <p>
-        <i class="fa fa-flag"></i>
-        <i class="fa fa-heart"></i>
-        <i class="fa fa-retweet"></i>
-      </p>
-    </footer>`;
-  const $tweet = $('<article>').addClass('tweet');
-  $tweet.append($content);
-  return $tweet;
-}
