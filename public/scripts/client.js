@@ -26,7 +26,7 @@ const createTweetElement = function (tweetObj) {
       </p>
       <p> ${tweetObj.user.handle} </p>
     </h4>
-    <section class = tweeter-content>${tweetObj.content.text}</section>
+    <section class = tweeter-content> ${escape(tweetObj.content.text)}</section>
     <footer>
       <time class="timeago"> ${timeago.format(new Date(tweetObj.created_at))}</time>
       <p>
@@ -53,3 +53,9 @@ const loadtweets = () => {$.ajax({
     console.log(error);
   }
 })}
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
