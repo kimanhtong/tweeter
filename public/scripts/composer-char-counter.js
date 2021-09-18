@@ -15,7 +15,7 @@ $(document).ready(function() {
       }
     });
     // Hide validation while typing data in the field
-    $("#error").hide();
+    $("#error").slideUp();
   });
 
   // Process on data submission if user clicks TWEET button
@@ -24,10 +24,10 @@ $(document).ready(function() {
     // Validate the length of tweet content must be > 0 and <= 140 
     const tweetLength = $('#tweet-text').val().length;
     if (tweetLength === 0) {
-      $('#error').text('Sorry, your tweet cannot be blank!').show();
+     $('#error').text('Sorry, your tweet cannot be blank!').slideDown();
     } else {
       if (tweetLength > 140) {
-        $('#error').text('Sorry, your tweet is too long!').show();
+        $('#error').text('Sorry, your tweet is too long!').slideDown();
       }
       // Send user inputs to server when validation is passed
       else {
