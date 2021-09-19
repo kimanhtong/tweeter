@@ -85,11 +85,10 @@ $(document).ready(function () {
       // Send user inputs to server when validation is passed
       else {
         const serializedData = $(this).serialize();
-        $.post("/tweets", serializedData)
-        .then((resp) => {
-        // Receive all tweets including the new one from server, then display them on the website 
+        $.post("/tweets", serializedData).then((resp) => {
+          // Receive all tweets including the new one from server, then display them on the website
           loadtweets();
-        // Reset the input and counter after all data is sent successfully
+          // Reset the input and counter after all data is sent successfully
           $("#tweet-text").val("");
           $(".counter").val(140);
         });

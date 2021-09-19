@@ -39,7 +39,7 @@ main {
   width: 90%;
   background-color: inherit;
   align-self: center;
-  
+
   /* Arrange the 2 sections including the new tweet and existing tweets in 1 column */
   display: flex;
   flex-direction: column;
@@ -60,14 +60,14 @@ main {
   border-width: 5px;
   padding: 10px;
   padding-left: 20px;
-  
+
   /* Set a distance between 2 tweets */
   margin-top: 30px;
 
   /* Set header, paragraph, and footer of a tweet displayed in a column */
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 /* Set color of a tweet on mouse hover */
@@ -76,7 +76,9 @@ main {
 }
 
 /* General setting for a tweet header/ paragraph/ footer */
-h4, p, footer {
+h4,
+p,
+footer {
   margin: 0;
   /*padding: 10px;
   padding-left: 20px;*/

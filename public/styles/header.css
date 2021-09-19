@@ -1,4 +1,5 @@
-header { /* Header bar design */
+header {
+  /* Header bar design */
   height: 400px;
   width: 100%;
   /* Leave room for navigation bar*/
@@ -9,7 +10,7 @@ header { /* Header bar design */
   display: flex; /* Use flex to design for the picture and name displayed */
   flex-direction: column; /* Arrange the picture and name in a column */
   align-items: center; /* Center-alignment for both items displayed */
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 h2 {
   font-weight: normal;

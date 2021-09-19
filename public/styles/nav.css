@@ -1,38 +1,44 @@
-nav { /* Navigation bar design */
+nav {
+  /* Navigation bar design */
   height: 120px;
   width: 100%; /* 100% of body width */
-  top:0;
+  top: 0;
   /* Fixed navigation bar */
   position: fixed;
   /**************/
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4056a1;
+  color: #ffffff;
   padding: 1.5em;
   display: flex;
   justify-content: space-between; /* align the text "Twitter" and "Write a new tweet" on 2 ends of navigation bar */
   z-index: 1111; /* always displayed on the top */
 }
-#title { /* Special for the text Twitter only */
-  font-family: 'Bungee', sans-serif; /* Font */
+#title {
+  /* Special for the text Twitter only */
+  font-family: "Bungee", sans-serif; /* Font */
   align-self: flex-end; /* Aligned at the bottom */
 }
-span { /* The part includes the word "Write", phrase "a new tweet", and angle-double-down */
+span {
+  /* The part includes the word "Write", phrase "a new tweet", and angle-double-down */
   display: flex;
-  flex-direction:column;
-  justify-content:flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.fa-angle-double-down { /* Special for the angle-double-down only */
-  color: #FF0000;
+.fa-angle-double-down {
+  /* Special for the angle-double-down only */
+  color: #ff0000;
   align-self: center;
 }
 
-.nav-tweet { /* The part includes the word "Write" and the phrase "a new tweet" */
-  font-family: 'Source Sans Pro', sans-serif;
+.nav-tweet {
+  /* The part includes the word "Write" and the phrase "a new tweet" */
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   padding-left: 7px;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
 }
-.bold { /* Bold the words "Write" and first-name in new-tweet*/
+.bold {
+  /* Bold the words "Write" and first-name in new-tweet*/
   font-weight: bold;
 }

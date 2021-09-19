@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
+    "local": "nodemon --watch server -e js server/index.js"
   },
   "author": "Lighthouse Labs",
   "license": "ISC",
@@ -19,6 +19,19 @@
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
     "nodemon": "^1.18.10"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimanhtong/tweeter.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kimanhtong/tweeter/issues"
+  },
+  "homepage": "https://github.com/kimanhtong/tweeter#readme"
 }

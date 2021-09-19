@@ -12,16 +12,16 @@ form {
 }
 /* Set font and arrange the button and the counter number in 1 row */
 .new-tweet div {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 /* Style the button */
 .new-tweet button {
-  align-self:flex-start;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  align-self: flex-start;
+  background-color: #4056a1;
+  color: #ffffff;
 }
 /* Style the text area */
 .new-tweet textarea {
@@ -36,7 +36,7 @@ form {
 
 /* Hide the text "Compose Tweet" */
 .new-tweet h2 {
-  display:none;
+  display: none;
 }
 
 /* Set font colors of the counter: black and red */
