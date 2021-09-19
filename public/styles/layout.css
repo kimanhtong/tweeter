@@ -46,7 +46,7 @@ main {
 }
 
 #tweets-container {
-  margin: 10px;
+  margin-bottom: 10px;
   /* Arrange all the existing tweets in 1 column */
   display: flex;
   flex-direction: column;

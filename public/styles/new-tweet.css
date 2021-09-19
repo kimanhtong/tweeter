@@ -1,25 +1,29 @@
-.new-tweet form {
-  display: flex;
-  flex-direction: column;
+form {
   padding-top: 20px;
   padding-bottom: 20px;
+  /* Arrange fields in 1 column */
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-
 }
+/* Bold the question */
 .new-tweet label {
   font-weight: bold;
 }
+/* Set font and arrange the button and the counter number in 1 row */
 .new-tweet div {
   font-family: 'Bungee', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+/* Style the button */
 .new-tweet button {
   align-self:flex-start;
   background-color: #4056A1;
   color: #FFFFFF;
 }
+/* Style the text area */
 .new-tweet textarea {
   background-color: transparent;
   border-style: none;
@@ -28,15 +32,17 @@
   margin-top: 10px;
   margin-bottom: 10px;
   height: 100px;
-  /*font-size: 23px;*/
 }
+
+/* Hide the text "Compose Tweet" */
 .new-tweet h2 {
   display:none;
 }
+
+/* Set font colors of the counter: black and red */
 .counter-red {
   color: red;
 }
-
 .counter-black {
   color: black;
 }

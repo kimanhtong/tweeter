@@ -2,6 +2,7 @@ $(document).ready(function () {
   // Display the number of characters typed in
   $("#tweet-text").on("input", function () {
     const count = 140 - this.value.length;
+    // Check counter and change colors appropriately
     $(".counter").each(function () {
       $(this).val(count);
       if (count < 0) {
