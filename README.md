@@ -15,5 +15,7 @@ Tweeter is a simple, single-page Twitter clone.
 - Node 5.10.x or above
 
 ## Images
-
+![Navigation and Header](https://github.com/kimanhtong/tweeter/blob/master/docs/Navigation%20n%20Header%20bars.png"Title")
+![Tweet Data](https://github.com/kimanhtong/tweeter/blob/master/docs/Input%20for%20new%20and%20Display%20of%20existing%20tweet.png "Tweets")
+![Validation Error](https://github.com/kimanhtong/tweeter/blob/master/docs/Validation%20error.png"Error")
 
