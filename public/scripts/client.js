@@ -63,6 +63,7 @@ const loadtweets = () => {
     },
   });
 };
+
 /****** Main function ****************************************************************************/
 $(document).ready(function () {
   // Load all tweets received from server
@@ -70,6 +71,7 @@ $(document).ready(function () {
 
   // Submit tweet data if user clicks TWEET button
   $("form").submit(function (event) {
+    // Prevent form navigation to /tweets link
     event.preventDefault();
 
     // Validate the length of tweet data must be > 0 and <= 140 characters
@@ -83,12 +85,14 @@ $(document).ready(function () {
       // Send user inputs to server when validation is passed
       else {
         const serializedData = $(this).serialize();
-        $.post("/tweets", serializedData).then((resp) => {
-          console.log(resp);
+        $.post("/tweets", serializedData)
+        .then((resp) => {
+        // Receive all tweets including the new one from server, then display them on the website 
           loadtweets();
+        // Reset the input and counter after all data is sent successfully
+          $("#tweet-text").val("");
+          $(".counter").val(140);
         });
-        $("#tweet-text").val("");
-        $(".counter").val(140);
       }
     }
   });

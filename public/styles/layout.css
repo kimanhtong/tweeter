@@ -20,6 +20,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  margin-bottom: 15px;
 }
 
 /*
@@ -28,65 +29,83 @@ body {
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  /* Arrange navigation, header, and main parts in 1 column */
   display: flex;
   flex-direction: column;
 }
 
 main {
-  /* set values of main as a child of "body" */
+  /* Set up the appearance of main section */
   width: 90%;
-  /* leave room for fixed navigation bar */
-  /*margin-top: 120px;
-  /********/
   background-color: inherit;
   align-self: center;
+  
+  /* Arrange the 2 sections including the new tweet and existing tweets in 1 column */
   display: flex;
   flex-direction: column;
 }
+
 #tweets-container {
+  margin: 10px;
+  /* Arrange all the existing tweets in 1 column */
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
-#error {
-  display: none;
-  color: red;
-  font-family: "Source Sans Pro", sans-serif;
-}
+/**********************************************************/
+
+/* Arrange tweets among each other */
 .tweet {
   width: 100%;
-  /*height:unset;*/
   border-style: solid;
   border-width: 5px;
-  margin-top: 10px; /* Set the distance between 2 tweets */
   padding: 10px;
+  padding-left: 20px;
+  
+  /* Set a distance between 2 tweets */
+  margin-top: 30px;
+
+  /* Set header, paragraph, and footer of a tweet displayed in a column */
   display: flex;
   flex-direction: column;
-  /* justify-content:center;*/
+  justify-content:space-around;
 }
-.tweet h4,
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.tweet footer {
-  font-size: 20px;
-}
+
+/* Set color of a tweet on mouse hover */
 .tweet:hover {
   box-shadow: 0 10px 50px 0 rgba(60, 56, 117, 0.877);
 }
-.fa {
-  color: rgb(47, 47, 124);
-}
-footer .fa:hover {
-  color: rgb(196, 148, 46);
-}
-.tweet h4 p {
+
+/* General setting for a tweet header/ paragraph/ footer */
+h4, p, footer {
+  margin: 0;
+  /*padding: 10px;
+  padding-left: 20px;*/
+  /* Arrange a tweet header/paragraph/footer in 3 rows */
   display: flex;
   flex-direction: row;
+  /* Arrange content of a tweet header/paragraph/footer on 2 ends of a row */
+  justify-content: space-between;
   align-items: center;
 }
-.tweet p {
+
+/* Tweet text displayed */
+.tweeter-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* Break long words at the end of lines */
   word-break: break-all;
+}
+
+/*** Tweet footer ***************/
+footer {
+  font-size: 18px;
+}
+
+.fa {
+  color: rgb(47, 47, 124);
+  padding: 3px;
+}
+
+.fa:hover {
+  color: rgb(196, 148, 46);
 }

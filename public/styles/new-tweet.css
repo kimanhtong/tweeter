@@ -40,3 +40,10 @@
 .counter-black {
   color: black;
 }
+
+/* Set font, color, and hide the error messages by default */
+#error {
+  display: none;
+  color: red;
+  font-family: "Source Sans Pro", sans-serif;
+}
