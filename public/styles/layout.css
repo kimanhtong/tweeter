@@ -80,8 +80,6 @@ h4,
 p,
 footer {
   margin: 0;
-  /*padding: 10px;
-  padding-left: 20px;*/
   /* Arrange a tweet header/paragraph/footer in 3 rows */
   display: flex;
   flex-direction: row;
@@ -110,4 +108,15 @@ footer {
 
 .fa:hover {
   color: rgb(196, 148, 46);
+}
+/***** Resposive Design *********************/
+/* Desktop style */
+@media only screen and (min-width: 1024px) {
+  main {
+    width: 70%;
+    margin-top: -400px;
+    float: right;
+    align-self:flex-end;
+    padding: 20px;
+  }
 }

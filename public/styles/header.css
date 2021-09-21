@@ -16,3 +16,19 @@ h2 {
   font-weight: normal;
   margin: 0;
 }
+
+/* Mobile style */
+@media only screen and (max-width: 768px) {
+  header {
+    margin-top: 0px;
+  }
+}
+/* Desktop style */
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 30%;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+}

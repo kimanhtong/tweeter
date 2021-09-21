@@ -42,3 +42,12 @@ span {
   /* Bold the words "Write" and first-name in new-tweet*/
   font-weight: bold;
 }
+
+/* Mobile style */
+@media only screen and (max-width: 768px) {
+  nav {
+    z-index: 1;
+    display:none;
+    
+  }
+}
