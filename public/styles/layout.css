@@ -113,10 +113,11 @@ footer {
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
   main {
-    width: 70%;
-    margin-top: -400px;
+    width: 60%;
+    margin-top: -420px;
     float: right;
     align-self:flex-end;
     padding: 20px;
+    padding-left: 40px;;
   }
 }

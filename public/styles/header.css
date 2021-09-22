@@ -27,8 +27,8 @@ h2 {
 @media only screen and (min-width: 1024px) {
   header {
     width: 30%;
-    margin-top: 150px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 180px;
+    margin-left: 50px;
   }
+  
 }
