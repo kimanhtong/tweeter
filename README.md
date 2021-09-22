@@ -15,7 +15,14 @@ Tweeter is a simple, single-page Twitter clone.
 - Node 5.10.x or above
 
 ## Images
+Main Page
 ![Main](https://github.com/kimanhtong/tweeter/blob/master/docs/Main%20content.png "Main Page")
+
+Error Message
 ![Error](https://github.com/kimanhtong/tweeter/blob/master/docs/Error%20message.png "Error Message")
+
+Responsive Design: 1 column display with Navigation Bar
 ![Responsive](https://github.com/kimanhtong/tweeter/blob/master/docs/1-column%20display%20with%20Nav%20bar.png "1 column with nav bar")
+
+Responsive Design: 1 column display without Navigation Bar
 ![Responsive](https://github.com/kimanhtong/tweeter/blob/master/docs/1-column%20display%20no%20Nav%20bar.png "1 column without nav bar")
