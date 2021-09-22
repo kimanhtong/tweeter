@@ -1,7 +1,7 @@
 /****** Section for function declaration ************************************************************/
 /****** Function to prevent cross site scripting ********************************/
 const escape = function (str) {
-  let div = document.createElement("div");
+  const div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
@@ -54,13 +54,13 @@ const loadtweets = () => {
     dataType: "json",
     success: (tweets) => {
       const $tweet = createTweetElement(tweets[0]);
-      let $container = $("#tweets-container");
+      const $container = $("#tweets-container");
       $container.prepend($tweet);
       renderTweets(tweets);
     },
     error: (error) => {
       console.log(error);
-    },
+    }
   });
 };
 
