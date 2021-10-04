@@ -53,15 +53,34 @@ const loadtweets = () => {
     method: "GET",
     dataType: "json",
     success: (tweets) => {
-      const $tweet = createTweetElement(tweets[0]);
-      const $container = $("#tweets-container");
-      $container.prepend($tweet);
       renderTweets(tweets);
     },
     error: (error) => {
       console.log(error);
     }
   });
+};
+/* Function to validate input */
+const valInput = () => {
+  // Validate the length of tweet data must be > 0 and <= 140 characters
+  const tweetLength = $("#tweet-text").val().length;
+  let result = false;
+  if (tweetLength === 0) {
+    $("#error").text("Sorry, your tweet cannot be blank!").slideDown();
+  } else {
+    if (tweetLength > 140) {
+      $("#error").text("Sorry, your tweet is too long!").slideDown();
+    } else {
+      result = true;
+    }
+  }
+  return result;
+};
+
+/* Function to reset the input and character counter */
+const resetInput = () => {
+  $("#tweet-text").val("");
+  $(".counter").val(140);
 };
 
 /****** Main function ****************************************************************************/
@@ -74,25 +93,16 @@ $(document).ready(function () {
     // Prevent form navigation to /tweets link
     event.preventDefault();
 
-    // Validate the length of tweet data must be > 0 and <= 140 characters
-    const tweetLength = $("#tweet-text").val().length;
-    if (tweetLength === 0) {
-      $("#error").text("Sorry, your tweet cannot be blank!").slideDown();
-    } else {
-      if (tweetLength > 140) {
-        $("#error").text("Sorry, your tweet is too long!").slideDown();
-      }
-      // Send user inputs to server when validation is passed
-      else {
-        const serializedData = $(this).serialize();
-        $.post("/tweets", serializedData).then((resp) => {
-          // Receive all tweets including the new one from server, then display them on the website
-          loadtweets();
-          // Reset the input and counter after all data is sent successfully
-          $("#tweet-text").val("");
-          $(".counter").val(140);
-        });
-      }
+    // Send user inputs to server when validation is passed
+    if (valInput()) {
+      const serializedData = $(this).serialize();
+      $.post("/tweets", serializedData)
+      .then(() => {
+        // Receive all tweets including the new one from server, then display them on the website
+        loadtweets();
+        // Reset the input and counter after all data is sent successfully
+        resetInput()
+      });
     }
   });
 });
